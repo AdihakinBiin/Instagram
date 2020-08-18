@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FF3679D6CC0BC05EB702625 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E055B2E6B7A3FDE3FC345FE0 /* Pods_Instagram.framework */; };
+		A628930524EC27E100854693 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A628930424EC27E100854693 /* Extentions.swift */; };
 		A6F5BD7E24EA8B8D00EA7880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5BD7D24EA8B8D00EA7880 /* AppDelegate.swift */; };
 		A6F5BD8024EA8B8D00EA7880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5BD7F24EA8B8D00EA7880 /* SceneDelegate.swift */; };
 		A6F5BD8524EA8B8D00EA7880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F5BD8324EA8B8D00EA7880 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		3803173C8864DCC45253AC20 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		71DA482BCE5CB90652819796 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
+		A628930424EC27E100854693 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		A6F5BD7A24EA8B8D00EA7880 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F5BD7D24EA8B8D00EA7880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6F5BD7F24EA8B8D00EA7880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				A6F5BDB924EA96C800EA7880 /* DatabaseManager.swift */,
 				A6F5BDBB24EA97D400EA7880 /* Authmanager.swift */,
 				A6F5BDBD24EA985100EA7880 /* StorageManager.swift */,
+				A628930424EC27E100854693 /* Extentions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				A6F5BD9524EA8BE400EA7880 /* HomeViewController.swift in Sources */,
 				A6F5BDAC24EA8C8F00EA7880 /* PostEditerViewController.swift in Sources */,
 				A6F5BDAD24EA8C8F00EA7880 /* PublishPostViewController.swift in Sources */,
+				A628930524EC27E100854693 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2536WFXFRU;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,6 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2536WFXFRU;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
