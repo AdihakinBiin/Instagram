@@ -64,11 +64,26 @@ public class AuthManager {
             }
         } else if username == username {
             //username login
-            print(username)
+            print(username as Any)
         } else {
             //either username or email does not exist
             completion(false)
         }
     }
+    //Attempt to logout fairebase user
+    public func logOut(completion: (Bool) -> Void){
+        
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+            return
+        } catch{
+            print(error)
+            completion(false)
+            return
+        }
+        
+    }
+    
 
 }
