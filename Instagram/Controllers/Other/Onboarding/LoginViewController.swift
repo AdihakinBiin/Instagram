@@ -189,7 +189,30 @@ class LoginViewController: UIViewController {
         }
         
         // login functionality
+        var email: String?
+        var username: String?
         
+        if usernameEmail.contains("@"), usernameEmail.contains("."){
+            //email login
+            email = usernameEmail
+        } else {
+            //username login
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    // user loged in
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    //error occured
+                    let alert = UIAlertController(title: "Login Error", message: "We are unable to log you in.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
         
         
     }
@@ -204,15 +227,16 @@ class LoginViewController: UIViewController {
     }
     @objc private func didTabPrivacyButton(){
         guard let url = URL(string: "https://help.instagram.com/519522125107875?helpref=page_content") else {
-                 return
-             }
-             
-             let vc = SFSafariViewController(url: url)
-             present(vc, animated:  true)
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated:  true)
     }
     @objc private func didTabCreatedAcountButton(){
         let vc  = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
     
     
